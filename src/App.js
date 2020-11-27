@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom'
 
 
 
@@ -6,7 +7,7 @@ import Comments from "./components/Comments";
 import CommentForm from "./components/CommentForm";
 
 import IntroPage from "./containers/IntroPage";
-
+import Nav from './components/Nav';
 
 
   class App extends Component {
@@ -15,6 +16,8 @@ import IntroPage from "./containers/IntroPage";
 
      
         <div>
+        <Nav />
+
           <IntroPage/>
           <CommentForm/>
           <hr/>
