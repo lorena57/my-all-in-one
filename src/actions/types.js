@@ -1,0 +1,3 @@
+export const FETCH_COMMENTS = 'FETCH_COMMENTS';
+export const NEW_COMMENTS = 'NEW_COMMENTS';
+

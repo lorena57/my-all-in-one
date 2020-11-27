@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Provider } from "react-redux";
 import store from './store'
 
-import Posts from "./components/Posts";
+import Comments from "./components/Comments";
 import Commentform from "./components/Commentform";
 
 
@@ -16,7 +16,7 @@ import Commentform from "./components/Commentform";
         <div>
           <Commentform/>
           <hr/>
-          <Posts/>
+          <Comments/>
         </div>
       </Provider>
     )
