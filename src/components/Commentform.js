@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { createComment } from "../actions/commentActions";
 
-
-
-class Commentform extends Component {
+class CommentForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,17 +22,9 @@ class Commentform extends Component {
 
         const comments = {
             comment: this.state.comments
-        }
+        };
 
-        fetch('http://localhost:3000/api/v1/notes', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(comments)
-        })
-        .then(res => res.json())
-        .then(data => console.log(data));
+        this.props.createComment(comments)
     }
 
     render() {
@@ -52,4 +44,6 @@ class Commentform extends Component {
     }
 }
 
-export default Commentform;
+
+
+export default connect(null, { createComment })(CommentForm);
