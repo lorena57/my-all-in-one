@@ -4,7 +4,9 @@ import { Provider } from "react-redux";
 import store from './store'
 
 import Comments from "./components/Comments";
-import Commentform from "./components/Commentform";
+import CommentForm from "./components/CommentForm";
+
+import IntroPage from "./containers/IntroPage";
 
 
 
@@ -14,7 +16,8 @@ import Commentform from "./components/Commentform";
 
       <Provider store={store}>
         <div>
-          <Commentform/>
+          <IntroPage/>
+          <CommentForm/>
           <hr/>
           <Comments/>
         </div>

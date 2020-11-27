@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { createComment } from "../actions/commentActions";
 
+
+
 class CommentForm extends Component {
     constructor(props) {
         super(props);
