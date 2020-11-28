@@ -8,6 +8,9 @@ import IntroPage from "./containers/IntroPage";
 import Nav from './components/Nav';
 
 
+
+
+
   class App extends Component {
   render() {
     return (
@@ -15,6 +18,8 @@ import Nav from './components/Nav';
      
         <div>
           <Nav />
+          <CommentForm/>
+          <Comments/>
 
           <Switch>
             <Route exact path='/' component={IntroPage} />

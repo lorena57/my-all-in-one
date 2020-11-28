@@ -10,15 +10,10 @@ const initialState = {
  const noteReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_COMMENTS:
-            return {
-                ...state,
-                comments: action.payload
-            };
+            return {...state, comments: action.payload};
         case NEW_COMMENTS:
-            return {
-                ...state,
-                comment: action.payload
-            };
+            const newComment = state.comments.concat(action.payload)
+            return {...state, newComment};
             default:
                 return state;
     }
