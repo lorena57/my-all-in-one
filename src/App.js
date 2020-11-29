@@ -3,12 +3,12 @@ import { Route, Switch } from 'react-router-dom'
 import Comments from "./components/Comments";
 import CommentForm from "./components/CommentForm";
 import ContactPage from "./containers/ContactPage";
-import GroceryPage from "./containers/GroceryPage";
+// import GroceryPage from "./containers/GroceryPage";
 import IntroPage from "./containers/IntroPage";
 import Nav from './components/Nav';
 
-import Groceries from "./components/Groceries";
-import GroceryForm from "./components/GroceryForm";
+// import Groceries from "./components/Groceries";
+// import GroceryForm from "./components/GroceryForm";
 
 
 
@@ -21,9 +21,10 @@ import GroceryForm from "./components/GroceryForm";
      
         <div>
           <Nav />
-        <Groceries />
-        <GroceryForm />
-        
+        {/* <GroceryForm />
+        <Groceries /> */}
+       
+        <hr/>
           <CommentForm/>
           <Comments/>
 
@@ -31,7 +32,7 @@ import GroceryForm from "./components/GroceryForm";
 
           <Switch>
             <Route exact path='/' component={IntroPage} />
-            <Route path='/grocery' component={GroceryPage} />
+          {/* <Route path='/grocery' component={GroceryForm} /> */}
             {/* <Route path='/note' component={NotePage} /> */}
             <Route path='/contact' component={ContactPage} />
           </Switch>
