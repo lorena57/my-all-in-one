@@ -17,7 +17,7 @@ class Comments extends Component {
         ));
         return (
             <div>
-                <h1>Posts</h1>
+                <h1>Notes</h1>
                 {commentItems}
             </div>
         )

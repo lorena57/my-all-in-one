@@ -4,6 +4,7 @@ import { FETCH_COMMENTS, NEW_COMMENT } from "../actions/types";
 const initialState = {
     comments: [],
     comment: {}
+    
 };
 
  const noteReducer = (state = initialState, action) => {

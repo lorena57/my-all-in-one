@@ -1,4 +1,4 @@
-import { FETCH_COMMENTS, NEW_COMMENT } from "./types";
+import { FETCH_COMMENTS, NEW_COMMENT} from "./types";
 
 
 export const fetchComments = () => dispatch => {
@@ -10,6 +10,10 @@ export const fetchComments = () => dispatch => {
         })
         );
 };
+
+
+
+
 
 export const createComment = commentData => dispatch => {
     fetch('http://localhost:3000/api/v1/notes', {

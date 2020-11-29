@@ -7,6 +7,9 @@ import GroceryPage from "./containers/GroceryPage";
 import IntroPage from "./containers/IntroPage";
 import Nav from './components/Nav';
 
+import Groceries from "./components/Groceries";
+import GroceryForm from "./components/GroceryForm";
+
 
 
 
@@ -18,8 +21,13 @@ import Nav from './components/Nav';
      
         <div>
           <Nav />
+        <Groceries />
+        <GroceryForm />
+        
           <CommentForm/>
           <Comments/>
+
+   
 
           <Switch>
             <Route exact path='/' component={IntroPage} />
