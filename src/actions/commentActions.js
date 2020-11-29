@@ -12,14 +12,12 @@ export const fetchComments = () => dispatch => {
 };
 
 
-
-
-
 export const createComment = commentData => dispatch => {
     fetch('http://localhost:3000/api/v1/notes', {
         method: 'POST',
         headers: {
-            'content-type': 'application/json'
+            'Content-type': 'application/json',
+            'Accept': 'application/json'
         },
         body: JSON.stringify(commentData)
     })

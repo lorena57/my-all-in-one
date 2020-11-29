@@ -9,6 +9,7 @@ class CommentForm extends Component {
         this.state = {
             comments: '',
             user_id: ''
+     
         };
 
         this.onChange = this.onChange.bind(this);
@@ -50,13 +51,7 @@ class CommentForm extends Component {
                     <br />
                     <button type="submit">Submit</button>
 
-                    <label>Choose Category: </label>
-                    <select value={this.state.user_id} name='user_id' onChange={this.onChange}>
-                        <option value="" disabled=""></option>
-                        <option value="1">Black Tea</option>
-                        <option value="2">Green Tea</option>
-  
-                    </select><br></br>
+
 
                 </form>
             </div>

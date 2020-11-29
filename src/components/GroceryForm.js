@@ -24,6 +24,7 @@ class GroceryForm extends Component {
         const grocery = {
             item: this.state.item,
             qty: this.state.qty,
+            user_id: this.state.user_id
         }
         fetch('http://localhost:3000/api/v1/groceries', {
             method: 'POST',
@@ -57,6 +58,14 @@ class GroceryForm extends Component {
        
                         <input type="text" name="user_id" onChange={this.onChange} value={this.state.user_id} />
                     </div>
+
+                    <label>Choose Category: </label>
+                    <select value={this.state.user_id} name='category_id' onChange={this.onChange}>
+                        <option value="" disabled=""></option>
+                        <option value="1">Black Tea</option>
+                        <option value="2">Green Tea</option>
+
+                    </select><br></br>
                 </form>
             </div>
         )
