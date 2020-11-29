@@ -1,8 +1,8 @@
-import { FETCH_COMMENTS, NEW_COMMENTS } from "./types";
+import { FETCH_COMMENTS, NEW_COMMENT } from "./types";
 
 
 export const fetchComments = () => dispatch => {
-        fetch('http://localhost:3000/api/v1/notes')
+    fetch('http://localhost:3000/api/v1/notes')
         .then(res => res.json())
         .then(comments => dispatch({
             type: FETCH_COMMENTS,
@@ -11,8 +11,7 @@ export const fetchComments = () => dispatch => {
         );
 };
 
-export const createComment = (commentData) => dispatch => {
-
+export const createComment = commentData => dispatch => {
     fetch('http://localhost:3000/api/v1/notes', {
         method: 'POST',
         headers: {
@@ -21,10 +20,12 @@ export const createComment = (commentData) => dispatch => {
         body: JSON.stringify(commentData)
     })
         .then(res => res.json())
-        .then(comment => dispatch({
-            type: NEW_COMMENTS,
-            payload: comment
-        }));
+        .then(comment =>
+            dispatch({
+                type: NEW_COMMENT,
+                payload: comment
+            })
+        );
 };
 
 

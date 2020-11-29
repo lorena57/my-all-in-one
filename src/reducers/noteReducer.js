@@ -1,6 +1,5 @@
-// import { FETCH_COMMENTS } from  '../actions/types';
 
-import { FETCH_COMMENTS, NEW_COMMENTS } from "../actions/types";
+import { FETCH_COMMENTS, NEW_COMMENT } from "../actions/types";
 
 const initialState = {
     comments: [],
@@ -11,9 +10,8 @@ const initialState = {
     switch (action.type) {
         case FETCH_COMMENTS:
             return {...state, comments: action.payload};
-        case NEW_COMMENTS:
-            const newComment = state.comments.concat(action.payload)
-            return {...state, newComment};
+        case NEW_COMMENT:
+            return {...state, comment: action.payload};
             default:
                 return state;
     }
